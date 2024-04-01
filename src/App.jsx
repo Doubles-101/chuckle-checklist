@@ -84,7 +84,7 @@ export const App = () => {
           <h2>Untold Jokes<span className="told-count">{untoldJokeCounter()}</span></h2>
           {untoldJokes.map((joke) => {
             return (
-              <li className="joke-list-item">
+              <li className="joke-list-item" key={joke.id}> 
                 <p className="joke-list-item-text">{joke.text}</p>
                 <span><div className="joke-list-action-toggle">
                   <button id={joke.id} onClick={() => {toggleButtonClicked(joke)}} >:D</button>
@@ -98,7 +98,7 @@ export const App = () => {
           <h2>Told Jokes<span className="told-count">{toldJokeCounter()}</span></h2>
           {toldJokes.map((joke) => {
             return (
-              <li className="joke-list-item">
+              <li className="joke-list-item" key={joke.id}>
                 <p className="joke-list-item-text">{joke.text}</p>
                 <span><div className="joke-list-action-toggle">
                  <button id={joke.id} onClick={() => {toggleButtonClicked(joke)}} >:D</button>
